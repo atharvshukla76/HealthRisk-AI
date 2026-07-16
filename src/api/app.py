@@ -26,6 +26,10 @@ class PatientData(BaseModel):
     hr: float
     smoker: str
 
+@app.get("/")
+def health_check():
+    return {"status": "HealthRisk API is running"}
+
 @app.post("/predict")
 def predict_risk(patient: PatientData):
     # Parse blood pressure string (e.g., "120/80" -> 120.0)
