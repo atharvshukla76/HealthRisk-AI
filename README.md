@@ -5,6 +5,11 @@
   <h1>🩺 HealthRisk AI</h1>
   <p><b>Enterprise Clinical Decision Support System</b></p>
 
+  <a href="https://healthrisk-ai-ggxzgmrmddzubvrqksbtxy.streamlit.app/">
+    <img src="https://img.shields.io/badge/🔴_View_Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Demo" />
+  </a>
+  <br/><br/>
+
   <!-- Animated Typing Text -->
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Predictive+Cardiovascular+Risk+Analysis;Zero-Leakage+MLOps+Pipeline;XGBoost+Decision+Engine;Real-Time+EHR+Synchronization" alt="Typing SVG" />
