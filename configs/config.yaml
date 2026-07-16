@@ -1,0 +1,15 @@
+data_sources:
+  openfda:
+    base_url: "https://api.fda.gov/drug/event.json"
+    default_limit: 100
+  clinicaltrials:
+    base_url: "https://clinicaltrials.gov/api/v2/studies"
+    default_format: "json"
+  mimic_iv:
+    version: "2.2"
+    
+models:
+  clinical_bert:
+    model_name: "emilyalsentzer/Bio_ClinicalBERT"
+    max_length: 512
+    batch_size: 16

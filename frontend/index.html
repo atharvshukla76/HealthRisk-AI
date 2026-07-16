@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical AI Patient Record</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orbs"></div>
+    
+    <div class="glass-dashboard">
+        <header class="dashboard-header">
+            <div class="logo">
+                <div class="pulse-dot"></div>
+                <h1>HealthRisk <span>AI</span></h1>
+            </div>
+            <p>Enterprise Clinical Decision Support System</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Left Side: Patient Intake Form -->
+            <div class="panel form-panel">
+                <h2>Patient Vitals & Demographics</h2>
+                <form id="clinical-form">
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Patient Age</label>
+                            <input type="number" id="age" required placeholder="Years (e.g. 55)">
+                        </div>
+                        <div class="input-group">
+                            <label>Biological Sex</label>
+                            <select id="gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Patient Weight (kg)</label>
+                            <input type="number" id="weight" required placeholder="Weight (e.g. 75)">
+                        </div>
+                        <div class="input-group">
+                            <label>Blood Pressure (mmHg)</label>
+                            <input type="text" id="bp" placeholder="e.g. 120/80">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Resting Heart Rate</label>
+                            <input type="number" id="hr" placeholder="BPM (e.g. 72)">
+                        </div>
+                        <div class="input-group">
+                            <label>Smoker Status</label>
+                            <select id="smoker">
+                                <option value="N">Non-Smoker</option>
+                                <option value="Y">Current Smoker</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="analyze-btn">Run AI Risk Analysis</button>
+                </form>
+            </div>
+
+            <!-- Right Side: AI Results Panel -->
+            <div class="panel results-panel">
+                <h2>Clinical Summary Report</h2>
+                
+                <div id="loading-state" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Processing Neural Network...</p>
+                </div>
+
+                <div id="results-state" class="hidden">
+                    <div class="risk-circle" id="risk-circle">
+                        <h3 id="risk-percentage">--%</h3>
+                        <span>Probability</span>
+                    </div>
+                    
+                    <div class="clinical-notes">
+                        <h4>AI Classification: <span id="risk-tier">--</span></h4>
+                        <p id="clinical-recommendation">--</p>
+                    </div>
+                </div>
+
+                <div id="idle-state" class="idle-text">
+                    <p>Enter patient data and click analyze to generate an AI risk report.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
